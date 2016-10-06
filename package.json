@@ -1,0 +1,25 @@
+{
+  "name": "brooklyn-eats",
+  "version": "1.0.0",
+  "description": "Food Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobcapshaw/brooklyn_eats.git"
+  },
+  "author": "Jacob Capshaw-Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobcapshaw/brooklyn_eats/issues"
+  },
+  "homepage": "https://github.com/jacobcapshaw/mean-stack-class#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
