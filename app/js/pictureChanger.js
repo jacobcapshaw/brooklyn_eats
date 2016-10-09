@@ -11,8 +11,8 @@ function showPicture(index) {
   var description = document.getElementById('description');
 
   var source = link.getAttribute('href');
-  var titleInfo = link.getAttribute('title');
-
+  var titleInfo = (index + 1);
+  // var titleInfo = link.getAttribute('title');
   placeholder.setAttribute('src', source);
   description.textContent = titleInfo;
   return false;

@@ -297,10 +297,6 @@ p.byline {
 
 #content {
 
-  p {
-    text-align: center;
-  }
-
   img {
     display: block;
     margin: auto;
@@ -308,9 +304,29 @@ p.byline {
     border-top: 2px solid $tertiary;
     border-bottom: 2px solid $tertiary;
     margin-top: 2rem;
+    // padding-bottom: 2em;
 
   @media (min-width: 47em) {
-    width: 429px;
+    width: 572px;
     }
+  }
+}
+
+.toggle {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2em;
+  margin-top: -1rem;
+
+  a {
+    color: $primary;
+  }
+
+  a:hover {
+    color: $tertiary;
+  }
+
+  #description {
+    color: $tertiary;
   }
 }
