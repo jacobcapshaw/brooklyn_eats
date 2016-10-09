@@ -210,7 +210,7 @@ ul {
   list-style: none;
 }
 
-img {
+img.reviewImage {
   float: left;
   width: 100%;
   /*padding-right: 8px;*/
@@ -285,4 +285,32 @@ p.byline {
   border-radius: 7px;
   border-top: 2px;
   border-bottom: 2px;
+}
+
+.imageGallery {
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+}
+
+#content {
+
+  p {
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-top: 2px solid $tertiary;
+    border-bottom: 2px solid $tertiary;
+    margin-top: 2rem;
+
+  @media (min-width: 47em) {
+    width: 429px;
+    }
+  }
 }
