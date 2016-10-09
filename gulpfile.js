@@ -19,16 +19,16 @@ gulp.task('sass', function (){
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(sassOutput))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 });
 
 gulp.task('serve', ['sass'], function(){
 
   browserSync.init({
     server: './app'
-  })
+  });
 
-  gulp.watch(sassSources, ['sass'])
+  gulp.watch(sassSources, ['sass']);
   gulp.watch(htmlSource).on('change', browserSync.reload);
 });
 
