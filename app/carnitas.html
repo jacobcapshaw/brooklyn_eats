@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/pictureChanger.js"></script>
 </head>
 
 <body class="p-recipes">
@@ -60,7 +61,19 @@
         <div itemprop="recipeInstructions">
           <p>Place the pork in a large Dutch oven or heavy pot. Add the orange juice, lime juice, garlic, cumin, salt and enough water to just barely cover the meat. Bring the pot to a boil and then reduce the heat to a simmer. Simmer uncovered for two hours. Don’t touch the meat.</p>
 
-          <img src="./img/carnitas.jpg">
+          <ul class="imageGallery">
+            <li><a href="./img/carnitas.jpg" title="Carnitas">1</a></li>
+            <li><a href="./img/ingredients.jpg" title="Ingredients">2</a></li>
+            <li><a href="./img/pork.jpg" title="Pork">3</a></li>
+            <li><a href="./img/cutPork.jpg" title="Cut Pork">4</a></li>
+            <li><a href="./img/cookedPork.jpg" title="Cooked Pork">5</a></li>
+          </ul>
+
+          <div id="content">
+            <img id="placeholder" src="img/placeholder.gif" alt="Placeholder">
+            <p id="description">Select an image.</p>
+          </div>
+
 
           <p>After two hours, increase the heat to medium-high and while occasionally stirring and turning the pieces, continue to cook for about 45 minutes, or until all of the liquid has evaporated, leaving only the rendered pork fat. Let it sizzle in this fat long enough to brown at the edges, turning pieces gently (they’ll be eager to fall apart), only as needed.</p>
 
