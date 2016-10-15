@@ -19,6 +19,13 @@ function showPicture(index) {
 }
 
 function initialize() {
+  initializeCarouselControls();
+  showPicture(0);
+  initializeModal();
+  closeModal();
+}
+
+function initializeCarouselControls() {
   var left = document.querySelector('#moveLeft');
   var right = document.querySelector('#moveRight');
   left.onclick = function(){
@@ -39,6 +46,20 @@ function initialize() {
     return false;
   }
 
-  showPicture(0);
+}
+
+function initializeModal() {
+  var modal = document.getElementById('modalGallery');
+  var img = document.getElementById('placeholder');
+  var modalImg = document.getElementById("modalImage");
+
+  img.onclick = function(){
+    modal.style.visibility = "visible";
+    modalImg.src = img.src;
+  }
+
+  modal.onclick = function() {
+    modal.style.visibility = "hidden";
+  }
 }
 

@@ -311,16 +311,20 @@ p.byline {
 #content {
   background-color: $white;
   padding: .5rem 0 2rem;
+  // border: 2px solid $primary;
   // box-shadow: 0 1px 17px $primary;
 
-  img {
+  #placeholder {
+    cursor: pointer;
     display: block;
     margin: auto;
+    height: 381px;
     width: 100%;
     // border-top: 2px solid $tertiary;
     // border-bottom: 2px solid $tertiary;
     margin-top: 2rem;
     box-shadow: 0 1px 17px $primary;
+    // border: 2px solid $dark-gray;
     // padding-bottom: 2em;
 
   @media (min-width: 47em) {
@@ -353,9 +357,46 @@ p.byline {
     color: $tertiary;
     padding: 0 4.3rem;
     display: none;
+    width: 159px;
 
     @media (min-width: 52em) {
       display: inline-block;
     }
   }
+}
+
+#modalGallery {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  position: fixed;
+  z-index: 15;
+  margin: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+
+  img {
+    max-width: 100%;
+  }
+
+  .modal-Gallery-Content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+
+  }
+}
+
+#modalClose {
+    // position: absolute;
+    // top: 15px;
+    // right: 35px;
+    color: $tertiary;
+    font-size: 40px;
+    font-weight: bold;
+    // transition: 0.3s;
+    cursor: pointer;
 }
