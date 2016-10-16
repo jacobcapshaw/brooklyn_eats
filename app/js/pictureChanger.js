@@ -22,7 +22,6 @@ function initialize() {
   initializeCarouselControls();
   showPicture(0);
   initializeModal();
-  closeModal();
 }
 
 function initializeCarouselControls() {
