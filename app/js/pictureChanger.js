@@ -53,12 +53,12 @@ function initializeModal() {
   var modalImg = document.getElementById("modalImage");
 
   img.onclick = function(){
-    modal.style.visibility = "visible";
+    modal.style.display = "flex";
     modalImg.src = img.src;
   }
 
   modal.onclick = function() {
-    modal.style.visibility = "hidden";
+    modal.style.display = "none";
   }
 }
 
