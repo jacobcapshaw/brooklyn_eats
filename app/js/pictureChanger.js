@@ -23,6 +23,7 @@ function initialize() {
   showPicture(0);
   initializeGalleryModal();
   initializeAccountModal();
+  // animateAccountIcon();
 }
 
 function initializeCarouselControls() {
@@ -76,3 +77,16 @@ function initializeAccountModal() {
     modal.style.display = "none";
   }
 }
+
+// function animateAccountIcon() {
+//   var icon = document.getElementById('accountIcon');
+//   console.log('initializing animation')
+//   icon.onmouseover = function() {
+//     console.log('animation')
+//     icon.className = 'account-animate';
+//     setTimeout(function(){
+//       icon.className = '';
+//     }, 1250);
+//   }
+// }
+
