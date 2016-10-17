@@ -113,20 +113,19 @@ nav {
 
   .account {
     position: absolute;
-    display: block;
+    display: none;
     color: white;
     margin-top: auto;
     font-size: 2.5rem;
     margin-bottom: .25rem;
     margin-right: 1rem;
-    top: 1.4%;
-    right: 0px;
+    // top: 1.4%;
+    // right: 0px;
 
     @media (min-width: 48em) {
       display: inline-block;
       position: static;
     }
-
 
     :hover {
       background-color: transparent;
@@ -369,9 +368,9 @@ p.byline {
     // box-shadow: 0 1px 17px $primary;
     // border: 2px solid $dark-gray;
     // padding-bottom: 2em;
-    border: 1px solid $primary;
+    // border: 1px solid $primary;
     // border-bottom: none;
-    border-radius: 7px 7px 0 0;
+    // border-radius: 7px 7px 0 0;
 
     @media (min-width: 47em) {
       max-width: 572px;
@@ -387,17 +386,18 @@ p.byline {
   font-size: 2.5em;
   margin: auto;
   max-width: 572px;
-  border: 1px solid $primary;
-  border-top: none;
-  border-radius: 0 0 7px 7px;
-  background-color: $accent;
-  // margin-top: -1rem;
+  // border: 1px solid $primary;
+  // border-top: none;
+  // border-radius: 0 0 7px 7px;
+  // background-color: $accent;
+  margin-top: 1rem;
 
   a {
-    color: white;
+    color: $white;
     background-color: rgba(255, 59, 63, .8);
     padding: 0 1.5rem .5rem;
-    // box-shadow: 0 1px 17px $primary;
+    box-shadow: 0 1px 17px $primary;
+    border-radius: 7px;
     transition: background-color .09s ease-in-out;
     -webkit-transition: background-color .09s ease-in-out;
   }
@@ -410,12 +410,12 @@ p.byline {
 
   #moveLeft {
     margin-right: auto;
-    border-radius: 0 0 0 4px;
+    // border-radius: 0 0 0 4px;
   }
 
   #moveRight {
     margin-left: auto;
-    border-radius: 0 0 4px 0;
+    // border-radius: 0 0 4px 0;
   }
 
   #description {
