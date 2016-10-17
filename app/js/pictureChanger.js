@@ -21,7 +21,8 @@ function showPicture(index) {
 function initialize() {
   initializeCarouselControls();
   showPicture(0);
-  initializeModal();
+  initializeGalleryModal();
+  initializeAccountModal();
 }
 
 function initializeCarouselControls() {
@@ -47,7 +48,7 @@ function initializeCarouselControls() {
 
 }
 
-function initializeModal() {
+function initializeGalleryModal() {
   var modal = document.getElementById('modalGallery');
   var img = document.getElementById('placeholder');
   var modalImg = document.getElementById("modalImage");
@@ -62,3 +63,16 @@ function initializeModal() {
   }
 }
 
+function initializeAccountModal() {
+  var modal = document.getElementById('modalAccount');
+  var accountIcon = document.getElementById('accountIcon');
+  var span = document.getElementById('accountClose');
+
+  accountIcon.onclick = function() {
+    modal.style.display = "flex";
+  }
+
+   span.onclick = function() {
+    modal.style.display = "none";
+  }
+}

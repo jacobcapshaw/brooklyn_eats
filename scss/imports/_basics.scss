@@ -113,7 +113,6 @@ nav {
 
   .account {
     color: white;
-    text-transform: uppercase;
     margin-top: auto;
     font-size: 2.5rem;
     margin-bottom: .25rem;
@@ -465,4 +464,87 @@ p.byline {
   @media (min-width: 47em) {
     margin: -1rem;
   }
+}
+
+#modalAccount {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  position: fixed;
+  z-index: 15;
+  margin: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 47em) {
+    margin-top: -1rem;
+  }
+
+  form {
+    font-size: 1rem;
+  }
+
+  input[type=text], input[type=password] {
+    margin: .5rem 0;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid $primary;
+  }
+
+  input[type=submit] {
+    display: block;
+    padding: .5rem;
+    margin: auto;
+    margin-top: .5rem;
+    font-size: 1rem;
+    color: white;
+    height: 2.5rem;
+    width: 6rem;
+    background-color: rgba( 255, 59, 63, .8);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 1px 17px $primary;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $tertiary;
+    }
+  }
+
+  .modalAccountForm {
+    position: relative;
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 17px black;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 1s;
+    animation-name: zoom;
+    animation-duration: .3s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+    from {transform:scale(.25)}
+    to {transform:scale(1)}
+  }
+
+    #accountClose {
+    position: absolute;
+    top: -11px;
+    right: 8px;
+    color: $tertiary;
+    font-size: 2.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 }
