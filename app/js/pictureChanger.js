@@ -1,4 +1,3 @@
-window.onload = initialize;
 
 var currentPictureIndex = 0;
 
@@ -18,6 +17,8 @@ function showPicture(index) {
   return false;
 }
 
+
+
 function initialize() {
   initializeCarouselControls();
   showPicture(0);
@@ -29,7 +30,7 @@ function initialize() {
 function initializeCarouselControls() {
   var left = document.querySelector('#moveLeft');
   var right = document.querySelector('#moveRight');
-  left.onclick = function(){
+  left.onclick = function() {
     currentPictureIndex--;
     if (currentPictureIndex < 0) {
       currentPictureIndex = 4;
@@ -65,6 +66,7 @@ function initializeGalleryModal() {
 }
 
 function initializeAccountModal() {
+  console.log('stuff')
   var modal = document.getElementById('modalAccount');
   var accountIcon = document.getElementById('accountIcon');
   var span = document.getElementById('accountClose');
