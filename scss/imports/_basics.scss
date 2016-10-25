@@ -576,7 +576,12 @@ p.byline {
 }
 
 .p-cuisines article {
-    margin: 1.5rem 1rem 1.5rem 1.875rem;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+
+    @media (min-width: 47em) {
+      margin: 1.5rem 1rem 1.5rem 1.875rem;
+
+    }
 }
 
 .recipes-list {
