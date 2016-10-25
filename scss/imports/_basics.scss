@@ -589,6 +589,10 @@ p.byline {
     display: flex;
     flex-wrap: wrap;
 
+    p {
+      margin: .875rem;
+    }
+
     h1 {
         margin-top: .875rem;
     }
