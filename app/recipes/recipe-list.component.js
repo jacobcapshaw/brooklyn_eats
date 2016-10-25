@@ -33,6 +33,22 @@ angular.module('recipeApp').component('recipeList', {
                 date: '2012-10-20',
                 description: 'You love the taste of French dishes—and cooking them yourself can be a lot easier than you think. Check out these authentic recipes, from soups to desserts.',
                 image: 'french.jpg'
+            },
+
+            {
+                name: 'recipe1811',
+                title: 'Middle Eastern',
+                date: '2012-10-20',
+                description: 'Find delicious and authentic Middle-Eastern food recipes that will make you feel as if you are vacationing in the Middle East.',
+                image: 'middle-eastern.jpg'
+            },
+
+            {
+                name: 'recipe1812',
+                title: 'Italian',
+                date: '2012-10-20',
+                description: 'Authentic Italian recipes, for pastas, pasta sauces, cookies, cakes, main dishes, and more.',
+                image: 'lasagne.png'
             }
         ]
     }
