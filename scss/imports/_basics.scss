@@ -603,6 +603,7 @@ p.byline {
         width: 30%;
         float: left;
         margin: .875rem;
+        margin-bottom: 0;
 
         @media (min-width: 47em) {
             width: 50%;

@@ -5,34 +5,34 @@ angular.module('recipeApp').component('recipeList', {
         this.recipes = [
             {
                 name: 'recipe1309',
-                title: 'Lasagna',
+                title: 'Mexican',
                 date: '2013-09-01',
-                description: 'Lasagna noodles piled high and layered full of three kinds of cheese to go along with the perfect blend of meaty and zesty, tomato pasta sauce all loaded with herbs.',
-                image: 'lasagne.png'
+                description: 'From tacos, burritos, and fajitas to regional specialties, our extensive library of Mexican recipes and food ideas includes all of your favorites.',
+                image: 'mexican.jpg'
             },
 
             {
                 name: 'recipe1404',
-                title: 'Pho-Chicken Noodle Soup',
+                title: 'American',
                 date: '2014-04-15',
-                description: 'Pho (pronounced "fuh") is the most popular food in Vietnam, often eaten for breakfast, lunch and dinner. It is made from a special broth that simmers for several hours infused with exotic spices and served over rice noodles with fresh herbs.',
-                image: 'pho.png'
+                description: 'Explore the distinct regional cuisines of America, including New England, the Heartland, the South, Northwest, Southwest and Louisiana.',
+                image: 'american.jpg'
             },
 
             {
                 name: 'recipe1210',
-                title: 'Guacamole',
+                title: 'Asian',
                 date: '2012-10-01',
-                description: 'Guacamole is definitely a staple of Mexican cuisine. Even though Guacamole is pretty simple, it can be tough to get the perfect flavor - with this authentic Mexican guacamole recipe, though, you will be an expert in no time.',
-                image: 'guacamole.png'
+                description: 'These favorite Asian recipes offer dishes from many diverse cuisines, from Japanese sushi to Thai curries and Chinese stir-frys to Vietnamese pho.',
+                image: 'asian.jpg'
             },
 
             {
                 name: 'recipe1810',
-                title: 'Hamburger',
+                title: 'French',
                 date: '2012-10-20',
-                description: 'A Hamburger (often called a burger) is a type of food in the form of a rounded bun sliced in half with its center filled with patty which is usually meat. Possible toppings include  lettuce, tomatoes and onions.',
-                image: 'hamburger.png'
+                description: 'You love the taste of French dishes—and cooking them yourself can be a lot easier than you think. Check out these authentic recipes, from soups to desserts.',
+                image: 'french.jpg'
             }
         ]
     }
