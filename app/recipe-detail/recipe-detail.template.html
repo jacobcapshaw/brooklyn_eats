@@ -23,5 +23,12 @@
         </li>
       </ul>
     </div>
+
+    <div itemprop="recipeInstructions" ng-repeat="instruction in $ctrl.recipe.instructions">
+      <p>
+        {{ instruction }}
+      </p>
+    </div>
+
   </article>
 </div>
