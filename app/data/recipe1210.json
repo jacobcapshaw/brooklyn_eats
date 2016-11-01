@@ -1,0 +1,27 @@
+{
+  "name": "recipe1210",
+  "title": "Guacamole",
+  "cuisine": "Mexican",
+  "date": "2016-10-01",
+  "description": "Guacamole is definitely a staple of Mexican cuisine. Even though Guacamole is pretty simple, it can be tough to get the perfect flavor - with this authentic Mexican guacamole recipe, though, you will be an expert in no time.",
+  "mainImageUrl": "img/home/guacamole.png",
+  "images": [
+    "guacamole.png",
+    "guacamole-2.jpg",
+    "guacamole-3.jpg",
+    "guacamole-4.jpg"
+  ],
+  "ingredients": [
+    "3 avocados - peeled, pitted, and mashed",
+    "1 lime, juiced",
+    "1 teaspoon salt",
+    "1/2 cup diced onion",
+    "3 tablespoons chopped fresh cilantro",
+    "2 roma (plum) tomatoes, diced",
+    "1 teaspoon minced garlic",
+    "1 pinch ground cayenne pepper (optional)"
+  ],
+  "instructions": [
+    "In a medium bowl, mash together the avocados, lime juice, and salt. Mix in onion, cilantro, tomatoes, and garlic. Stir in cayenne pepper. Refrigerate 1 hour for best flavor, or serve immediately."
+  ]
+}

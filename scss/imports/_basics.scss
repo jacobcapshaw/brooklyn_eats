@@ -604,7 +604,7 @@ p.byline {
     margin-right: .875rem;
     background-color: $accent;
     flex: 1 0 100%;
-    @media (min-width: 47em) {
+    @media (min-width: 49em) {
       flex: 1 0 calc(50% - .875rem);
 
     }
@@ -628,18 +628,62 @@ p.byline {
 }
 
 .recipe-detail-image {
-  padding-right: 2.875rem;
-  margin: 2rem 1rem;
+  padding: 0 .5rem;
   width: 100%;
   margin-top: 1rem;
 }
+
 .recipe-thumbs {
   width: 100%;
-  margin: 1rem 0;
+  margin: .8rem 0;
   display: flex;
+
+  :hover {
+    cursor: pointer;
+  }
 
   img {
     width: 100%;
     padding: 0 0.5rem;
+  }
+}
+
+.queries {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: 47em) {
+    justify-content: space-between;
+
+  }
+
+
+  span {
+    // flex: 1 0 50%;
+    // margin: .5rem 2rem;
+    font-size: 1rem;
+    margin-right: 0;
+
+    @media (min-width: 47em) {
+      margin-right: 1rem;
+
+    }
+
+    .search-box, .sort-by {
+      width: 20rem;
+      height: 2.5rem;
+      padding: 8px;
+      margin: 4px;
+      // margin-left: .5rem;
+      border: 1px solid $primary;
+      border-radius: 5px;
+      font-family: "FontAwesome", "raleway";
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
