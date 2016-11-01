@@ -1,23 +1,27 @@
-<div itemscope itemtype="http://schema.org/Recipe">
+<div class="recipe-detail" itemscope itemtype="http://schema.org/Recipe">
+  <article>
+    <h2>{{ $ctrl.recipe.title }}</h2>
 
-  <h2>{{ $ctrl.recipe.title }}</h2>
+    <!--<img ng-src="{{ $ctrl.recipe.mainImageUrl }}" />-->
+    <img ng-src="img/home/{{$ctrl.mainImageUrl}}" class="recipe-detail-image" />
 
-  <!--<img ng-src="{{ $ctrl.recipe.mainImageUrl }}" />-->
-  <img ng-src="img/home/{{$ctrl.mainImageUrl}}" class="recipe-detail-image" />
+    <ul class="recipe-thumbs">
+      <li ng-repeat="img in $ctrl.recipe.images">
+        <img ng-src="img/home/{{img}}" ng-click="$ctrl.setImage(img)" />
+      </li>
+    </ul>
 
-  <ul class="recipe-thumbs">
-    <li ng-repeat="img in $ctrl.recipe.images">
-      <img ng-src="img/home/{{img}}" ng-click="$ctrl.setImage(img)" />
-    </li>
-  </ul>
+    <p>{{ $ctrl.recipe.description }}</p>
 
-  <p>{{ $ctrl.recipe.description }}</p>
-
-  <h3>Ingredients</h3>
-  <ul class="info">
-    <li ng-repeat="ingredient in $ctrl.recipe.ingredients">
-      {{ ingredient }}
-    </li>
-  </ul>
-
+    <div class="info">
+      <strong>Cuisine:</strong>
+      <span>{{ $ctrl.recipe.cuisine }}</span><br>
+      <strong>Ingredients:</strong>
+      <ul class="ingredients">
+        <li ng-repeat="ingredient in $ctrl.recipe.ingredients">
+          - {{ ingredient }}
+        </li>
+      </ul>
+    </div>
+  </article>
 </div>
