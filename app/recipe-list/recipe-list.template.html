@@ -1,7 +1,7 @@
 <div class="recipe-list">
   <article>
     <div class="queries">
-    <span class="search"><!-- Search:  --><!-- <i class="fa fa-search" aria-hidden="true"></i> --><input placeholder="&#xf002;  Search" class="search-box" ng-model="$ctrl.query" /></span>
+      <span class="search"><!-- Search:  --><!-- <i class="fa fa-search" aria-hidden="true"></i> --><input placeholder="&#xf002;  Search" class="search-box" ng-model="$ctrl.query" /></span>
       <span class="sort"><!-- Sort by: -->
         <select class="sort-by" ng-model="$ctrl.orderProp">
           <option value="0" disabled selected>Sort</option>
@@ -13,9 +13,9 @@
     </div>
 
     <ul class="recipes-list">
-      <li ng-repeat="recipe in $ctrl.recipes | filter: $ctrl.query | orderBy:$ctrl.orderProp">
-        <img ng-src="img/home/{{ recipe.image }}">
-        <h1><a href="#!recipes/{{ recipe.name }}">{{ recipe.title }}</a></h1>
+      <li ng-repeat="recipe in $ctrl.recipes | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+      <img ng-src="img/home/{{ recipe.images[0] }}">
+        <h1><a href="#!recipes/{{ recipe._id }} ">{{ recipe.title }}</a></h1>
         <p>{{ recipe.description }}</p>
       </li>
     </ul>

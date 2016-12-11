@@ -7,12 +7,11 @@ angular.module('recipeDetail').component('recipeDetail', {
             self.setImage = function setImage(imageUrl) {
                 self.mainImageUrl = imageUrl;
             };
-
-            $http.get('data/' + $routeParams.recipeId + '.json').then(function (response) {
+            console.log($routeParams)
+            $http.get('/api/recipes/' + $routeParams.recipeId).then(function (response) {
                 self.recipe = response.data;
                 self.setImage(self.recipe.images[0]);
-            })
-
+            });
         }
     ]
 });
