@@ -31,13 +31,15 @@
     </div>
 
     <form ng-submit="addComment()" name="commentForm">
-      <input type="text" name="comment" ng-required="true" ng-model="comment">
-      <button type="submit">SUBMIT</button>
+      <textarea class="comment-input" name="comment" ng-required="true" ng-model="comment" rows="10" cols="50"></textarea>
+      <div >
+        <button class="comment-button" type="submit">SUBMIT</button>
+      </div>
     </form>
 
     <ul class="comments">
       <li ng-repeat="comment in $ctrl.recipe.comments">
-        - {{ comment }}
+        {{ comment }}
       </li>
     </ul>
 
