@@ -1,5 +1,4 @@
 {
-  "name": "recipe1210",
   "title": "Guacamole",
   "cuisine": "Mexican",
   "date": "2016-10-01",
@@ -23,5 +22,6 @@
   ],
   "instructions": [
     "In a medium bowl, mash together the avocados, lime juice, and salt. Mix in onion, cilantro, tomatoes, and garlic. Stir in cayenne pepper. Refrigerate 1 hour for best flavor, or serve immediately."
-  ]
+  ],
+  "comments": []
 }

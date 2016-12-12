@@ -66,7 +66,6 @@ function initializeGalleryModal() {
 }
 
 function initializeAccountModal() {
-  console.log('stuff')
   var modal = document.getElementById('modalAccount');
   var accountIcon = document.getElementById('accountIcon');
   var span = document.getElementById('accountClose');

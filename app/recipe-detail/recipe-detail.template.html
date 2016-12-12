@@ -30,5 +30,16 @@
       </p>
     </div>
 
+    <form ng-submit="addComment()" name="commentForm">
+      <input type="text" name="comment" ng-required="true" ng-model="comment">
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    <ul class="comments">
+      <li ng-repeat="comment in $ctrl.recipe.comments">
+        - {{ comment }}
+      </li>
+    </ul>
+
   </article>
 </div>

@@ -18,7 +18,7 @@ app.use(express.static('app'))
 
 
 router.use(function (req, res, next) {
-  console.log('Something is happening.');
+  console.log('Something is happening.', port);
   next();
 });
 
@@ -57,4 +57,14 @@ router.route('/recipes/:recipe_id')
       }
       res.json(recipe);
     });
+  });
+
+router.route('/recipes/:recipe_id')
+  .put(function (req, res) {
+    Recipe.update({ '_id': req.params.recipe_id }, req.body,
+        function (err, numberAffected) {
+            if (err) return console.log(err);
+            console.log('Updated comments', numberAffected);
+            return res.sendStatus(202);
+        })
   });
