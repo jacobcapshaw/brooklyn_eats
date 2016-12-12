@@ -28,6 +28,8 @@ html, body {
 header {
   background-color: $primary;
   border-bottom: 2px solid $dark-gray;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: 47em) {
     border-bottom: none;
@@ -92,8 +94,12 @@ nav {
     width: 100%;
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-    @media (min-width: 47em) {
+    @media (min-width: 49em) {
+      flex-direction: row;
       padding: 0 0 0 1.5rem;
     }
   }
@@ -104,7 +110,7 @@ nav {
     font-size: 1.75em;
     font-weight: 900;
 
-    @media (min-width: 47em) {
+    @media (min-width: 49em) {
       display: inline-block;
       margin-right: 1em;
       font-size: 1.5em;
@@ -122,9 +128,10 @@ nav {
     // top: 1.4%;
     // right: 0px;
 
-    @media (min-width: 48em) {
+    @media (min-width: 49em) {
       display: inline-block;
-      position: static;
+      position: absolute;
+      right: 0rem;
     }
 
     :hover {
@@ -163,8 +170,8 @@ nav {
     border-bottom: 2px solid $dark-gray;
     z-index: 5;
 
-    @media (min-width: 47em) {
-      width: 9rem;
+    @media (min-width: 49em) {
+      width: 14.8rem;
       border-radius: 7px 7px 0 0;
       border: none;
     }
@@ -696,6 +703,7 @@ form {
     border-color: $dark-gray;
     display: block;
     margin: auto;
+    margin-top: 1rem;
     border-radius: 7px;
     font-family: "raleway", arial, sans-serif;
     font-size: 1rem;
@@ -710,6 +718,7 @@ form {
     margin-top: .5rem;
     margin-bottom: 1rem;
     font-size: 1rem;
+    outline: none;
     color: white;
     height: 2.5rem;
     width: 6rem;
@@ -727,7 +736,24 @@ form {
     width: 100%;
     background-color: $accent;
     padding: .5rem;
-    margin: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
     border-radius: 7px;
+
+    .comment-date {
+      font-style: italic;
+      font-size: .8rem;
+      margin-bottom: .5rem;
+    }
   }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.recipe-description {
+  background-color: $accent;
+  padding: .5rem;
+  border-radius: 7px;
 }

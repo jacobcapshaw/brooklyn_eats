@@ -14,9 +14,14 @@ angular.module('recipeDetail').component('recipeDetail', {
             });
 
             $scope.addComment = function () {
-                self.recipe.comments.unshift($scope.comment);
+                var comment = {
+                    text: $scope.comment,
+                    date: new Date().toDateString()
+                }
+                self.recipe.comments.unshift(comment);
                 $http.put('/api/recipes/' + self.recipe._id, self.recipe)
                     .success(function () {
+                        $scope.comment = '';
                         $scope.commentForm.$setPristine();
                         $scope.commentForm.$setUntouched();
                         // $scope.recipe.comments = data.recipe.comments
