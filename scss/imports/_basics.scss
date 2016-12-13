@@ -677,8 +677,24 @@ p.byline {
 
     }
 
-    .search-box, .sort-by {
-      width: 20rem;
+    .sort-by {
+      width: 9rem;
+      height: 2.5rem;
+      padding: 8px;
+      margin: 4px;
+      // margin-left: .5rem;
+      border: 1px solid $primary;
+      border-radius: 5px;
+      font-family: "FontAwesome", "raleway";
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search-box {
+      width: 17rem;
       height: 2.5rem;
       padding: 8px;
       margin: 4px;

@@ -2,7 +2,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
 var bodyParser = require('body-parser');
-var mongoUri = 'mongodb://localhost/recipe-api';
+var mongoUri = 'mongodb://127.0.0.1/recipe-api';
 var db = mongoose.connection;
 mongoose.connect(mongoUri);
 
