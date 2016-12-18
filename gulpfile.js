@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var sftp = require('gulp-sftp');
+var $ = require('jquery');
 // var SECRETS = require('./secrets');
 
 var sassOptions = {
@@ -22,6 +23,25 @@ gulp.task('sass', function (){
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(sassOutput))
     .pipe(browserSync.stream());
+});
+
+gulp.task('sassprod', function() {
+  return gulp.src(sassSources)
+    .pipe($.sass())
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest(sassOutput))
+    .pipe($.connect.reload());
+});
+
+gulp.task('serveprod', ['sassprod'], function() {
+  connect.server({
+    root: './app',
+    port: process.env.PORT || 5000,
+    livereload: false
+  });
 });
 
 gulp.task('serve', ['sass'], function(){
