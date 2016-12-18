@@ -2,7 +2,8 @@ var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
 var bodyParser = require('body-parser');
-var mongoUri = 'mongodb://127.0.0.1/recipe-api';
+// var mongoUri = 'mongodb://127.0.0.1/recipe-api';
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://127.0.0.1/recipe-api';
 var db = mongoose.connection;
 mongoose.connect(mongoUri);
 
@@ -26,7 +27,7 @@ router.get('/', function (req, res) {
   res.json({ message: 'hooray! welcome to our api!' });
 });
 
-app.listen(port);
+app.listen(process.env.PORT)
 console.log('Magic happens on port ' + port);
 
 router.route('/recipes')
