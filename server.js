@@ -6,7 +6,7 @@ var mongoUri = 'mongodb://127.0.0.1/recipe-api';
 var db = mongoose.connection;
 mongoose.connect(mongoUri);
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 5000;
 var router = express.Router();
 var Recipe = require('./app/models/recipe');
 
