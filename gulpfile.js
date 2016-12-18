@@ -33,8 +33,8 @@ gulp.task('sassprod', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest(sassOutput))
-    .pipe(connect.reload());
+    .pipe(gulp.dest(sassOutput));
+    // .pipe(connect.reload());
 });
 
 gulp.task('serveprod', ['sassprod'], function() {
@@ -43,7 +43,6 @@ gulp.task('serveprod', ['sassprod'], function() {
     port: process.env.PORT || 5000,
     livereload: false
   });
-  require('./server');
 });
 
 gulp.task('serve', ['sass'], function(){
