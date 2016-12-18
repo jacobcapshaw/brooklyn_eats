@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var sftp = require('gulp-sftp');
-var SECRETS = require('./secrets');
+// var SECRETS = require('./secrets');
 
 var sassOptions = {
   errLogToConsole: true,
@@ -37,14 +37,14 @@ gulp.task('serve', ['sass'], function(){
 
 gulp.task('default', ['serve']);
 
-gulp.task('deploy', function(){
-  return gulp.src('./app/**/*')
-  .pipe(sftp({
-    host: 'oit2.scps.nyu.edu',
-    user: SECRETS.user,
-    pass: SECRETS.pass,
-    remotePath: '/home/c/capshawj/web'
-  }));
-});
+// gulp.task('deploy', function(){
+//   return gulp.src('./app/**/*')
+//   .pipe(sftp({
+//     host: 'oit2.scps.nyu.edu',
+//     user: SECRETS.user,
+//     pass: SECRETS.pass,
+//     remotePath: '/home/c/capshawj/web'
+//   }));
+// });
 
 gulp.task('default', ['serve']);
