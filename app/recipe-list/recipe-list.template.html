@@ -14,7 +14,7 @@
 
     <ul class="recipes-list">
       <li ng-repeat="recipe in $ctrl.recipes | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-      <img ng-src="img/home/{{ recipe.images[0] }}">
+      <img src="{{ recipe.images[0] }}">
         <h1><a href="#!recipes/{{ recipe._id }} ">{{ recipe.title }}</a></h1>
         <p>{{ recipe.description }}</p>
       </li>

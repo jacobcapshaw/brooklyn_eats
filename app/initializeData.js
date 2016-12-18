@@ -1,15 +1,10 @@
 var Recipe = require('./models/recipe');
 
 module.exports = function initializeData() {
-  var recipes = Recipe.count({}, addRecipes);
+  Recipe.remove({}, addRecipes);
 }
 
-function addRecipes(err, count) {
-  if (err || count > 0) {
-    console.log('no recipes added', err, 'count was ' + count);
-    return;
-  }
-
+function addRecipes(err) {
   Recipe.create({
     "title": "Guacamole",
     "cuisine": "Mexican",
