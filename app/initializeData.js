@@ -15,12 +15,12 @@ function addRecipes(err, count) {
     "cuisine": "Mexican",
     "date": "2016-10-01",
     "description": "Guacamole is definitely a staple of Mexican cuisine. Even though Guacamole is pretty simple, it can be tough to get the perfect flavor - with this authentic Mexican guacamole recipe, though, you will be an expert in no time.",
-    "mainImageUrl": "img/home/guacamole.png",
+    "mainImageUrl": "https://s19.postimg.org/kp7zkb877/guacamole.png",
     "images": [
-      "guacamole.png",
-      "guacamole-2.jpg",
-      "guacamole-3.jpg",
-      "guacamole-4.jpg"
+      "https://s19.postimg.org/kp7zkb877/guacamole.png",
+      "https://s19.postimg.org/y2b4mxd1f/guacamole_2.jpg",
+      "https://s19.postimg.org/63gyw2ber/guacamole_3.jpg",
+      "https://s19.postimg.org/7wjvkdwlf/guacamole_4.jpg"
     ],
     "ingredients": [
       "3 avocados - peeled, pitted, and mashed",
@@ -43,12 +43,12 @@ function addRecipes(err, count) {
     "cuisine": "Italian",
     "date": "2013-09-01",
     "description": "Lasagna noodles piled high and layered full of three kinds of cheese to go along with the perfect blend of meaty and zesty, tomato pasta sauce all loaded with herbs.",
-    "mainImageUrl": "img/home/lasagna-1.png",
+    "mainImageUrl": "https://s19.postimg.org/syjuyq1xf/lasagna_1.png",
     "images": [
-      "lasagna-1.png",
-      "lasagna-2.png",
-      "lasagna-3.png",
-      "lasagna-4.png"
+      "https://s19.postimg.org/syjuyq1xf/lasagna_1.png",
+      "https://s19.postimg.org/6b4lskmdf/lasagna_2.png",
+      "https://s19.postimg.org/w7ya56q0z/lasagna_3.png",
+      "https://s19.postimg.org/wlzm4sa4j/lasagna_4.png"
     ],
     "ingredients": [
       "1 pound sweet Italian sausage",
@@ -88,13 +88,13 @@ function addRecipes(err, count) {
     "cuisine": "Mexican",
     "date": "2016-12-11",
     "description": "This Mexican carnitas recipe is authentic braised and fried pork that's fall-apart-tender pork goodness ready for tacos.",
-    "mainImageUrl": "img/home/carnitas.jpg",
+    "mainImageUrl": "https://s19.postimg.org/slnvesu9v/carnitas.jpg",
     "images": [
-      "carnitas.jpg",
-      "ingredients.jpg",
-      "pork.jpg",
-      "cutPork.jpg",
-      "cookedPork.jpg"
+      "https://s19.postimg.org/slnvesu9v/carnitas.jpg",
+      "https://s19.postimg.org/6y3ii3j9f/ingredients.jpg",
+      "https://s19.postimg.org/ghi98od37/pork.jpg",
+      "https://s19.postimg.org/t0z57tg77/cutPork.jpg",
+      "https://s19.postimg.org/odt361sub/cookedPork.jpg"
     ],
     "ingredients": [
       "3 pounds boneless pork shoulder or pork butt, cut into 2-inch cubes",
