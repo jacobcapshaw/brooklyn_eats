@@ -2,7 +2,6 @@ var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
 var bodyParser = require('body-parser');
-// var mongoUri = 'mongodb://127.0.0.1/recipe-api';
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://127.0.0.1/recipe-api';
 var db = mongoose.connection;
 mongoose.connect(mongoUri);
@@ -11,12 +10,12 @@ var port = process.env.PORT || 5000;
 var router = express.Router();
 var Recipe = require('./app/models/recipe');
 
+var initialize = require('./app/initializeData');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/api', router);
 app.use(express.static('app'))
-
-
 
 router.use(function (req, res, next) {
   console.log('Something is happening.', port);
@@ -29,6 +28,7 @@ router.get('/', function (req, res) {
 
 app.listen(process.env.PORT)
 console.log('Magic happens on port ' + port);
+initialize();
 
 router.route('/recipes')
   .post(function (req, res) {
