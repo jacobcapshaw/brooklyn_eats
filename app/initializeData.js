@@ -1,7 +1,7 @@
 var Recipe = require('./models/recipe');
 
 module.exports = function initializeData() {
-  var recipes = Recipe.count({}, addRecipes(err, count));
+  var recipes = Recipe.count({}, addRecipes);
 }
 
 function addRecipes(err, count) {

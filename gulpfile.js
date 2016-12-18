@@ -43,6 +43,7 @@ gulp.task('serveprod', ['sassprod'], function() {
     port: process.env.PORT || 5000,
     livereload: false
   });
+  require('./server');
 });
 
 gulp.task('serve', ['sass'], function(){
