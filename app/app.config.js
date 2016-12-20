@@ -10,3 +10,16 @@ angular.module('recipeApp').config(
             }).
             otherwise('/recipes');
     });
+
+angular.module('reviewApp').config(
+    function config($locationProvider, $routeProvider) {
+        $locationProvider.hashPrefix('!');
+        $routeProvider.
+            when('/', {
+                template: '<review-list></review-list>'
+            }).
+            when('/reviews/:reviewId', {
+                template: '<review-detail></review-detail>'
+            }).
+            otherwise('/reviews');
+    });

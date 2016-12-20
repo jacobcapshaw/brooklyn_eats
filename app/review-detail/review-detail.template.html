@@ -1,0 +1,60 @@
+<div class="review-detail">
+  <article>
+    <h2>{{ $ctrl.review.name }}</h2>
+
+    <p class="byline"><strong>Bottom Line: </strong>{{ $ctrl.review.description }}</p>
+
+    <div class="info">
+      <strong>Cuisine:</strong>
+      <span>{{ $ctrl.review.cuisine }}</span><br>
+      <strong>Cost:</strong>
+      <span>{{ $ctrl.review.price }}</span><br>
+      <strong>Region:</strong>
+      <span>{{ $ctrl.review.region }}</span><br>
+      <ul>
+        <li>{{ $ctrl.review.name }}</li>
+        <li>{{ $ctrl.review.address1 }}</li>
+        <li>{{ $ctrl.review.address2 }}</li>
+        <li><a href="{{ $ctrl.review.map }}">Map</a></li>
+        <li>{{ $ctrl.review.phone }}</li>
+        <li><a href="#">Website</a></li>
+      </ul>
+    </div>
+
+    <div itemprop="reviewContent">
+      <p>
+        {{ $ctrl.review.content[0] }}
+      </p>
+      <blockquote>
+        <em> {{ $ctrl.review.quote }} </em>
+      </blockquote>
+      <div itemprop="reviewContent" ng-repeat="content in $ctrl.review.content.slice(1,3)">
+        <p>
+          {{ content }}
+        </p>
+      </div>
+      <img class="reviewImage" src="{{ $ctrl.review.image }}">
+      <div itemprop="reviewContent" ng-repeat="content in $ctrl.review.content.slice(3)">
+        <p>
+          {{ content }}
+        </p>
+      </div>
+    </div>
+
+    <h3>Comments</h3>
+    <form ng-submit="addComment()" name="commentForm">
+      <textarea class="comment-input" name="comment" ng-required="true" ng-model="comment"></textarea>
+      <div >
+        <button class="comment-button" type="submit">SUBMIT</button>
+      </div>
+    </form>
+
+    <ul class="comments">
+      <li ng-repeat="comment in $ctrl.review.comments">
+        <div class="comment-date">{{ comment.date }}</div>
+        <div class="comment-body">{{ comment.text }} </div>
+      </li>
+    </ul>
+
+  </article>
+</div>

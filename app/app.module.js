@@ -3,3 +3,9 @@ angular.module('recipeApp', [
     'recipeList',
     'recipeDetail'
 ]);
+
+angular.module('reviewApp', [
+    'ngRoute',
+    'reviewList',
+    'reviewDetail'
+]);

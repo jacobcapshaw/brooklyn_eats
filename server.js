@@ -9,6 +9,7 @@ var mongoUri = process.env.MONGODB_URI || process.env.MONGOHQ_URL || 'mongodb://
 var port = process.env.PORT || 5000;
 var router = express.Router();
 var Recipe = require('./app/models/recipe');
+var Review = require('./app/models/review');
 
 var initializeData = require('./app/initializeData');
 
@@ -24,7 +25,6 @@ var db;
 // Connect to the database before starting the application server.
 mongoose.connect(mongoUri, function (err, database) {
   if (err) {
-    console.log('oops', mongoUri);
     console.log(err);
     process.exit(1);
   }
@@ -41,9 +41,6 @@ mongoose.connect(mongoUri, function (err, database) {
 
   initializeData();
 });
-
-
-
 
 router.use(function (req, res, next) {
   console.log('Something is happening.', port);
@@ -90,6 +87,46 @@ router.route('/recipes/:recipe_id')
 router.route('/recipes/:recipe_id')
   .put(function (req, res) {
     Recipe.update({ '_id': req.params.recipe_id }, req.body,
+        function (err, numberAffected) {
+            if (err) return console.log(err);
+            console.log('Updated comments', numberAffected);
+            return res.sendStatus(202);
+        })
+  });
+
+router.route('/reviews')
+  .post(function (req, res) {
+    var review = new Review(req);
+    Review.create(req.body, function (err) {
+      if (err) {
+        res.send(err);
+      }
+      res.send(review);
+    });
+    console.log(review);
+  })
+  .get(function (req, res) {
+    Review.find({}, function (err, reviews) {
+      if (err) res.send(err);
+      res.json(reviews);
+    })
+  })
+
+
+router.route('/reviews/:review')
+  .get(function (req, res) {
+    Review.findById(req.params.review, function (err, review) {
+      console.log('review', review);
+      if (err) {
+        res.send(err);
+      }
+      res.json(review);
+    });
+  });
+
+router.route('/reviewss/:review_id')
+  .put(function (req, res) {
+    Recipe.update({ '_id': req.params.review_id }, req.body,
         function (err, numberAffected) {
             if (err) return console.log(err);
             console.log('Updated comments', numberAffected);

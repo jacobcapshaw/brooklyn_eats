@@ -582,18 +582,18 @@ p.byline {
 
 }
 
-.p-cuisines .recipe-list article {
+.p-cuisines .recipe-list article, .p-reviews .review-list article {
   margin: 1.5rem 1rem 1.5rem 1rem;
   padding: 2.5rem 0 0;
 
   @media (min-width: 47em) {
     margin: 2rem 1rem 1.5rem 1.875rem;
   }
-
-
 }
 
-.recipes-list {
+
+.recipes-list,
+.reviews-list {
   display: flex;
   flex-wrap: wrap;
 
@@ -716,6 +716,8 @@ form {
   margin: auto;
 
   textarea {
+    width: 20rem;
+    height: 5.1rem;
     border-color: $dark-gray;
     display: block;
     margin: auto;
@@ -725,6 +727,12 @@ form {
     font-size: 1rem;
     outline: none;
     padding: .5rem;
+
+    @media (min-width: 49em) {
+      width: 26rem;
+      height: 7.1rem;
+
+    }
   }
 
   .comment-button {
