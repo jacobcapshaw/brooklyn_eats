@@ -24,7 +24,32 @@ function addReviews(err) {
     "Husband-and-wife team Scott and Brenda Kim, who opened up Matsu in late 2000, are there almost every day of the week and help make every customer feel at home. When we returned on a later night, we were immediately recognized and greeted almost like family. The servers generally keep a close eye on the tables, which is one benefit of the limited seating. Scott is often behind the sushi bar, tending to orders himself, or else in the kitchen doing the same. Brenda, as hostess, oversees the servers and seating with efficiency and charm.",
     "If you're looking for a good Japanese experience but can't foot the bill for a flight to Tokyo, then Matsu is an excellent backup plan. We'll be back again soon."],
     "quote": "It's so good, it beats out most of the Brooklyn sushi places we've tried.",
-    "image": "https://s19.postimg.org/jqa7pcbpf/sushi_c.jpg",
+    "image": "https://s19.postimg.org/kg26t6r0j/sushi_a.jpg",
+    "comments": []
+  });
+
+  Review.create({
+    description: "An oyster bar that has expanded its menu but preserved its French Quarter atmosphere",
+    "cuisine": "French",
+    "cost": "$$-$$$",
+    "region": "Williamsburg",
+    "name": "Maison Premiere",
+    "address1": "298 Bedford Ave",
+    "address2": "Brooklyn, NY 11211",
+    "map": "https://www.google.com/maps/place/Maison+Premi%C3%A8re/@40.7142571,-73.9616224,15z/data=!4m5!3m4!1s0x0:0xcb55e54de2d99b36!8m2!3d40.7142571!4d-73.9616224",
+    "phone": "(347) 335-0446",
+    "content": ["The tight room is astonishingly loud, verging on raucous, but still the waiters murmur, hands behind their backs.",
+    "They are better dressed than the diners, in black vests and narrow ties, and never break character. A porcelain cloche is lifted, a sauce poured from a tiny jug, cloche after cloche, jug after jug. At first this prim choreography seems tongue-in-cheek, then earnest, and finally almost silly — and all the more charming for it, like much of the orchestrated seduction that is a night at Maison Premiere.",
+    "When it opened in Williamsburg, Brooklyn, two and a half years ago, Maison Premiere was an exercise in mood (louche) and epoch (French Quarter circa the 1890s). Primarily a bar, it served little more than absinthe and oysters. This was enough. Everyone wanted in.",
+    "Apparently, the owners, Joshua Boissy and Krystof Zizka, were not content with the neighborhood’s nightly adulation. Perhaps they want to be loved for more than good looks. Last summer they built a kitchen in the basement and hired Jared Stafford-Hill, formerly at Adour Alain Ducasse, to introduce more elaborate but still seafood-focused small plates. Since his departure in April, his sous-chef, Lisa Giffen (another Adour alum), has further refined and expanded the menu.",
+    "The food is impressionistic, best appreciated as a series of lovely, fleeting moments rather than the sustained arc that typically constitutes a meal. From the raw bar come thin slices of sea scallop with rosy pickled rhubarb and a drift of shaved horseradish ice, hot and cold at once. Razor clam, sweet and almost squidlike in texture, is punctuated by crisp, clean radish. A spoonful of lobster dressed with mayonnaise, celery and tarragon, anchoring a cracked tail shell, suggests a stolen bite from a New England lobster roll, with buttered bread crumbs in lieu of the roll.",
+    "Nothing is minutiae here. An exacting microdice of pickled beets, alongside shavings of cured egg yolk, smoked caviar and dots of crème fraîche, turns Arctic char into an almost Russian geometry of creaminess and saltiness. Spanish mackerel is charred before being steeped in an escabeche of grapefruit, orange and orange zest. Buttery daurade gets sharp diacritics of pickled gooseberries and tarragon.",
+    "At times effort outstrips effect: peekytoe crab is overburdened by saffron rouille and olive tapenade; sea scallops grow soupy in a lethargic Grenobloise of browned butter and capers. Louisiana-style crayfish on a toasted baguette is appropriately equipped with horseradish rémoulade and a long-simmered red roux, but it lacks gusto and heft.",
+    "The large plates still bear the marks of a miniaturist. Impeccably round potato orbs, carved out with a melon baller, are loaded into a chowder poured tableside over turbot and clams basted in seaweed butter. Black cod is half-roasted, half-steamed in foil, scattered with pliant, raw green almonds and finished with a grassy nage made with Dolin’s dry vermouth. Rabbit is a progression from hind leg (braised and breaded) to loin and tenderloin (torqued around a liver farce, or stuffing) to a rack of ribs so tiny and doll-like it may give you pause. (It is the best part.)",
+    "A few practical notes: Do not attempt to enter Maison Premiere from 4 to 7 p.m., when many of the immaculate oysters are $1 each and the crowd is restless. Later you will still wait, but at least with hope. Better yet, make a reservation for the $95 tasting menu, which for a party of two begins with a daunting two-tiered tower of oysters and crustaceans and ends with a silver tray of five desserts, four of which I would have happily traded for more of the perfect cannelés, with custard hearts and chewy exteriors just shy of burned.",
+    "If you are offered a table in the garden, the angels are at your side. White pebbles catch underfoot. Above, a trellis is strung with globe lights that hint at rather than provide illumination. Vines creep. From inside comes the occasional clash and roar, but no one pays any mind. Let the world continue without us."],
+    "quote": "The food is impressionistic, best appreciated as a series of lovely, fleeting moments rather than the sustained arc that typically constitutes a meal.",
+    "image": "https://s19.postimg.org/ckrnedhdv/maison.jpg",
     "comments": []
   });
 };
